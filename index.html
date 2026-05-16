@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY CAFE — Brewed With Love</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#hero" class="nav-logo">MY CAFE</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" onclick="closeNav()">About</a></li>
+            <li><a href="#menu" onclick="closeNav()">Menu</a></li>
+            <li><a href="#specials" onclick="closeNav()">Specials</a></li>
+            <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+        </ul>
+        <div style="display:flex;align-items:center;gap:0.8rem;">
+            <button class="nav-cart" onclick="toggleCart()">
+                🛒 Cart <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="hamburger" id="hamburger" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="steam">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="hero-content">
+            <div class="hero-tag">☕ Est. 2018 · Premium Cafe</div>
+            <h1 class="hero-title">MY<br><em>CAFE</em></h1>
+            <p class="hero-sub">Brewed with Love, Served with Soul</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn-primary">Explore Menu</a>
+                <a href="#about" class="btn-outline">Our Story</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-num">80+</div>
+                    <div class="stat-label">Menu Items</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">50k</div>
+                    <div class="stat-label">Happy Guests</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">4.9★</div>
+                    <div class="stat-label">Rated</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">6yr</div>
+                    <div class="stat-label">Of Love</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-grid">
+            <div>
+                <div class="section-label">Our Story</div>
+                <h2 class="section-title">More Than Just <em>Coffee</em></h2>
+                <p class="section-desc">My Cafe was born from a single dream — to create a warm corner of the world
+                    where every cup tells a story. We source the finest beans, bake everything fresh daily, and make
+                    every guest feel at home.</p>
+                <div class="about-features">
+                    <div class="feat-item"><span class="feat-icon">🌱</span>
+                        <div class="feat-text"><strong>Freshly Sourced</strong><span>Farm-to-cup ethically sourced
+                                ingredients daily</span></div>
+                    </div>
+                    <div class="feat-item"><span class="feat-icon">👨‍🍳</span>
+                        <div class="feat-text"><strong>Expert Baristas</strong><span>Trained artisans crafting every
+                                drink with care</span></div>
+                    </div>
+                    <div class="feat-item"><span class="feat-icon">🏠</span>
+                        <div class="feat-text"><strong>Cosy Atmosphere</strong><span>A home away from home, always
+                                welcoming</span></div>
+                    </div>
+                    <div class="feat-item"><span class="feat-icon">🚀</span>
+                        <div class="feat-text"><strong>Fast Delivery</strong><span>Order online and get it in 20–30
+                                minutes</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-icon">☕</div>
+                <div class="about-caption">"Every sip is a moment of joy"</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu">
+        <div class="menu-header">
+            <div class="section-label">What We Serve</div>
+            <h2 class="section-title">Our Full <em>Menu</em></h2>
+            <p class="section-desc" style="margin:0 auto;">Carefully crafted for every craving. Tap a category to
+                explore.</p>
+        </div>
+        <div class="category-tabs" id="categoryTabs"></div>
+        <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <!-- SPECIALS -->
+    <section id="specials">
+        <div class="specials-inner">
+            <div class="section-label" style="color:var(--caramel);">Today's Picks</div>
+            <h2 class="section-title">Daily <em>Specials</em></h2>
+            <div class="specials-grid" id="specialsGrid"></div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-grid">
+            <div>
+                <div class="section-label">Find Us</div>
+                <h2 class="section-title">Visit <em>My Cafe</em></h2>
+                <p class="section-desc">We'd love to see you in person. Walk in anytime — the kettle's always on.</p>
+                <div class="info-blocks">
+                    <div class="info-block"><span class="info-icon">📍</span>
+                        <div class="info-content"><strong>Location</strong><span>12, Harbour Road, Near City
+                                Park<br>Andhra Pradesh, India 522001</span></div>
+                    </div>
+                    <div class="info-block"><span class="info-icon">🕐</span>
+                        <div class="info-content"><strong>Hours</strong><span>Mon–Fri: 7:00 AM – 10:00 PM<br>Sat–Sun:
+                                8:00 AM – 11:00 PM</span></div>
+                    </div>
+                    <div class="info-block"><span class="info-icon">📞</span>
+                        <div class="info-content"><strong>Call Us</strong><span>+91 98765 43210</span></div>
+                    </div>
+                    <div class="info-block"><span class="info-icon">✉️</span>
+                        <div class="info-content"><strong>Email</strong><span>hello@mycafe.in</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. Ravi Kumar"
+                        id="cName"></div>
+                <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com"
+                        id="cEmail"></div>
+                <div class="form-group"><label>Message</label><textarea placeholder="Tell us something..."
+                        id="cMsg"></textarea></div>
+                <button class="submit-btn" onclick="submitContact()">Send Message ✉️</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">MY CAFE</div>
+        <p class="footer-tagline">"Brewed with Love, Served with Soul"</p>
+        <div class="footer-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#specials">Specials</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <hr class="footer-divider">
+        <p class="footer-copy">© 2024 My Cafe. All rights reserved. Made with ☕ & ❤️</p>
+    </footer>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>🛒 Your Order</h2>
+            <button class="close-cart" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div class="cart-empty-icon">🧺</div>
+                <p>Your cart is empty.<br>Add something delicious!</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-summary" id="cartSummary"></div>
+            <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
+        </div>
+    </div>
+
+    <!-- ORDER MODAL -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Complete Your Order</h2>
+                <p>Fill in your details and we'll take care of the rest</p>
+            </div>
+            <div class="modal-body">
+                <div class="order-summary-box">
+                    <h3>📋 Order Summary</h3>
+                    <div id="modalOrderItems"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>First Name</label><input type="text" id="oFirst" placeholder="Ravi">
+                    </div>
+                    <div class="form-group"><label>Last Name</label><input type="text" id="oLast" placeholder="Kumar">
+                    </div>
+                </div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" id="oPhone"
+                        placeholder="+91 98765 43210"></div>
+                <div class="form-group"><label>Email</label><input type="email" id="oEmail"
+                        placeholder="you@example.com"></div>
+                <div class="form-group">
+                    <label>Order Type</label>
+                    <select id="oType" onchange="toggleAddress()">
+                        <option value="dine">🍽️ Dine In</option>
+                        <option value="takeaway">🥡 Takeaway</option>
+                        <option value="delivery">🚀 Home Delivery</option>
+                    </select>
+                </div>
+                <div class="form-group" id="addressGroup" style="display:none;">
+                    <label>Delivery Address</label>
+                    <textarea id="oAddress" placeholder="Full delivery address..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select id="oPayment">
+                        <option value="cash">💵 Cash on Delivery</option>
+                        <option value="upi">📱 UPI / PhonePe / GPay</option>
+                        <option value="card">💳 Credit / Debit Card</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Special Instructions</label><textarea id="oNotes"
+                        placeholder="Allergies, extra sugar, etc."></textarea></div>
+                <button class="place-order-btn" onclick="placeOrder()">☕ Place Order</button>
+                <button class="modal-close-btn" onclick="closeModal('orderModal')">Back to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal-overlay" id="successModal">
+        <div class="success-modal">
+            <div class="success-icon">🎉</div>
+            <h2>Order Placed!</h2>
+            <p>Thank you for ordering from</p>
+            <div class="order-id" id="successOrderId"></div>
+            <p>Your order is being prepared with love.</p>
+            <div class="eta-badge" id="etaBadge">⏱ Estimated: 25–30 min</div>
+            <br>
+            <button class="btn-primary" onclick="closeModal('successModal');clearCart()">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("1MKqOmkAz4thNPjq9");
+    </script>
+</body>
+
+</html>
