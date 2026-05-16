@@ -262,7 +262,7 @@ function toggleAddress() {
     document.getElementById('addressGroup').style.display = type === 'delivery' ? 'block' : 'none';
 }
 // FIND this in the JS (around line: "function placeOrder()")
-function ===placeOrder() {
+function placeOrder() {
 
     const first =
         document.getElementById('oFirst').value.trim();
